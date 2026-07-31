@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiArrowDown, FiDownload, FiMail } from 'react-icons/fi'
-import { contact, socialLinks, stats } from '../data/portfolioData'
+import { contact, socialLinks } from '../data/portfolioData'
 
 const words = ['Analytics Solutions', 'ML Workflows', 'Enterprise ERP', 'Data Dashboards']
+const stats = [
+  { value: 1, suffix: '', label: 'Enterprise Project' },
+  { value: 7.05, suffix: '', label: 'Current CGPA' },
+]
 
 function AnimatedCounter({ value, suffix }) {
   const [count, setCount] = useState(0)
