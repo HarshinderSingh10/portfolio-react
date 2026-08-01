@@ -97,7 +97,7 @@ function Hero() {
             <a href="#projects" className="glow-button group">
               View Projects <FiArrowDown className="transition group-hover:translate-y-0.5" />
             </a>
-            <a href="/resume.pdf" className="secondary-button">
+            <a href="harshinder_cv2026_DA_.pdf" className="secondary-button">
               Download Resume <FiDownload />
             </a>
             <a href="#contact" className="secondary-button">
@@ -148,7 +148,7 @@ function Hero() {
                 Current Focus
               </p>
               <p className="mt-3 text-lg font-semibold text-white">
-                ERP systems, predictive workflows, workforce analytics, and industrial reporting.
+                Strengthening expertise in Data Analytics, Machine Learning, SQL, Tableau, and enterprise application development while building scalable real-world solutions.
               </p>
               <p className="mt-3 text-sm text-zinc-400">{contact.location}</p>
             </div>
