@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaGithub } from 'react-icons/fa'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FiArrowUpRight, FiExternalLink } from 'react-icons/fi'
 import { projects } from '../data/portfolioData'
 import SectionHeader from './SectionHeader'
 
@@ -25,10 +25,16 @@ function Projects() {
               transition={{ delay: index * 0.1, duration: 0.58 }}
               whileHover={{ y: -8, scale: 1.01 }}
               className={`group relative overflow-hidden rounded-lg border bg-zinc-900/70 p-6 shadow-2xl shadow-black/30 ${
-                project.featured ? 'border-cyan-300/40 lg:col-span-2 lg:p-8' : 'border-white/10'
+                project.featured
+                  ? 'border-cyan-300/40 lg:col-span-2 lg:p-8'
+                  : project.prominent
+                    ? 'border-violet-300/30 shadow-violet-950/20'
+                    : 'border-white/10'
               }`}
             >
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-0 transition group-hover:opacity-100" />
+              <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${
+                project.prominent ? 'via-violet-300/70' : 'via-cyan-300/70'
+              } to-transparent opacity-0 transition group-hover:opacity-100`} />
               <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
                 <div>
                   <div className="flex items-center gap-3">
@@ -43,9 +49,13 @@ function Projects() {
                   <p className="mt-4 max-w-3xl leading-8 text-zinc-300">{project.summary}</p>
                 </div>
 
-                {project.featured && (
-                  <span className="w-fit rounded-md bg-cyan-300 px-3 py-1 text-sm font-black text-zinc-950">
-                    Industrial Deployment
+                {project.badge && (
+                  <span className={`w-fit rounded-md px-3 py-1 text-sm font-black ${
+                    project.featured
+                      ? 'bg-cyan-300 text-zinc-950'
+                      : 'border border-cyan-300/25 bg-cyan-300/10 text-cyan-100'
+                  }`}>
+                    {project.badge}
                   </span>
                 )}
               </div>
@@ -69,15 +79,29 @@ function Projects() {
                 ))}
               </div>
 
-              {project.github && (
+              {(project.github || project.liveDemo) && (
+                <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+                  {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-8 inline-flex items-center gap-2 font-semibold text-violet-100 transition hover:text-cyan-200"
+                  className="inline-flex items-center gap-2 font-semibold text-violet-100 transition hover:text-cyan-200"
                 >
                   <FaGithub /> GitHub <FiArrowUpRight />
                 </a>
+                  )}
+                  {project.liveDemo && (
+                    <a
+                      href={project.liveDemo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 font-semibold text-violet-100 transition hover:text-cyan-200"
+                    >
+                      <FiExternalLink /> Live Demo <FiArrowUpRight />
+                    </a>
+                  )}
+                </div>
               )}
             </motion.article>
           )

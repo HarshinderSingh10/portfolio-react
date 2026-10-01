@@ -7,8 +7,8 @@ function Skills() {
     <section id="skills" className="section-shell">
       <SectionHeader
         eyebrow="Technical Skills"
-        title="A practical data stack for insight, automation, and delivery."
-        description="Grouped by how the tools are used across analytics, data science, backend systems, databases, and production workflows."
+        title="A practical stack for analytics, machine learning, and AI."
+        description="Tools and concepts across data analytics, computer vision, application development, and production workflows."
       />
 
       <motion.div

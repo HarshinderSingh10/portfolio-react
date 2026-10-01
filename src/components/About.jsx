@@ -14,8 +14,8 @@ function About() {
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <SectionHeader
           eyebrow="About Me"
-          title="Data science mindset with production engineering habits."
-          description="Data Analytics and Data Science enthusiast with hands-on experience developing AI-powered applications, enterprise ERP solutions, and inventory management systems."
+          title="Data analytics, data science, and AI for real-world problems."
+          description="Hands-on experience in enterprise ERP systems, computer vision, and machine learning research, with an emphasis on turning data into practical solutions."
         />
 
         <motion.div
@@ -26,13 +26,13 @@ function About() {
           className="rounded-lg border border-white/10 bg-zinc-900/60 p-6 sm:p-8"
         >
           <p className="text-lg leading-8 text-zinc-300">
-            Skilled in Python, SQL, Tableau, Machine Learning, and data visualization
-            with experience building scalable applications and transforming operational
-            data into actionable insights.
+            Data Analytics, Data Science, and AI enthusiast with hands-on experience
+            in enterprise ERP systems, computer vision, and machine learning research.
           </p>
           <p className="mt-5 text-lg leading-8 text-zinc-300">
-            Passionate about solving real-world problems through analytics,
-            automation, and predictive modeling.
+            Skilled in Python, SQL, Machine Learning, Computer Vision, PostgreSQL,
+            TensorFlow, REST APIs, and data visualization, with experience building
+            end-to-end applications for real-world problems.
           </p>
         </motion.div>
       </div>

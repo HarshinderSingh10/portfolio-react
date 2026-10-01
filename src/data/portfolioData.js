@@ -14,7 +14,6 @@ import {
   SiJupyter,
   SiKeras,
   SiMysql,
-  SiPandas,
   SiPostgresql,
   SiScikitlearn,
   SiTensorflow,
@@ -45,22 +44,17 @@ export const socialLinks = [
 ]
 
 export const stats = [
-  { value: 3, suffix: '+', label: 'Enterprise deployments' },
-  { value: 25, suffix: '+', label: 'Analytics workflows' },
-  { value: 10, suffix: '', label: 'Hacknovate rank' },
+  { value: 4, suffix: '', label: 'Total Projects' },
   { value: 7.05, suffix: '', label: 'Current CGPA' },
 ]
 
 export const experience = {
   company: 'NTPC Limited, Dadri',
   role: 'Vocational Trainee',
-  period: 'July 2026 - Present',
+  period: 'July 2026 - August 2026',
   points: [
-    'Assisted in analyzing operational and maintenance data for process monitoring and performance evaluation.',
-    'Worked with engineering teams to understand industrial workflows and data collection practices.',
-    'Performed data organization, reporting, and documentation for operational insights.',
-    'Gained exposure to industrial automation systems and data-driven decision making.',
-    'Currently building an ERP system for Vocational Training / Internship Candidates.',
+    'Analyzed operational and maintenance data, organized datasets, and prepared reports to support process monitoring, performance evaluation, and data-driven decisions.',
+    'Worked with engineering teams to understand industrial workflows and developed an ERP application for vocational training and internship candidate management.',
   ],
 }
 
@@ -69,25 +63,83 @@ export const projects = [
     title: 'InOut+ Attendance ERP',
     type: 'Industrial Project',
     summary:
-      'Attendance ERP deployed across Swarna Technical Textiles Pvt. Ltd., Nufab Technical Textiles Pvt. Ltd., and Nufab Green Pvt. Ltd.',
+      'Developed an enterprise Attendance ERP deployed across Swarna Technical Textiles Pvt. Ltd., Nufab Technical Textiles Pvt. Ltd., and Nufab Green Pvt. Ltd., supporting face-recognition attendance, shift tracking, and salary computation.',
     highlights: [
       'Face Recognition Attendance',
       'Shift Tracking',
       'Salary Computation',
+      'Multi-factory PostgreSQL Architecture',
+      'REST APIs: attendance, salary, leave, gate pass, PF, and ESI',
+      'Automated Reports',
       'Workforce Analytics',
-      'PostgreSQL Database Design',
       'Operational Dashboards',
       'RBAC',
       'Enterprise Backend',
       'Synology NAS Deployment',
     ],
-    tech: ['Python', 'PostgreSQL', 'Docker', 'React', 'FastAPI', 'Synology NAS'],
+    tech: ['Python', 'PostgreSQL', 'REST APIs', 'Docker', 'React', 'FastAPI', 'Synology NAS', 'Face Recognition'],
     icon: SiPostgresql,
     featured: true,
+    badge: 'Industrial Deployment',
+  },
+  {
+    title: 'Identity Drift Detection & Adaptive Re-Enrollment for Face Recognition',
+    type: 'Machine Learning / Computer Vision / Research',
+    summary:
+      'Developed a research system to measure temporal changes in facial representations caused by aging, lighting, expression, camera, and image-quality variations using longitudinal evaluation. Designed quantitative measures for embedding drift and identity stability and analyzed drift patterns to investigate adaptive re-enrollment based on identity stability.',
+    highlights: [
+      'Longitudinal Evaluation',
+      'Embedding Drift Measurement',
+      'Identity Stability Analysis',
+      'Adaptive Re-Enrollment',
+    ],
+    tech: [
+      'Python',
+      'InsightFace',
+      'ArcFace',
+      'Face Embeddings',
+      'ONNX Runtime',
+      'OpenCV',
+      'Computer Vision',
+      'Machine Learning',
+      'Embedding Drift',
+      'Identity Stability',
+      'Adaptive Re-Enrollment',
+      'Longitudinal Evaluation',
+    ],
+    icon: FaPython,
+    prominent: true,
+    badge: 'Research',
+  },
+  {
+    title: 'AI-Powered Photo Discovery & Face Search',
+    type: 'AI / Computer Vision',
+    summary:
+      'Developed an AI-powered photo search system using Google Drive API, OAuth, and InsightFace to retrieve images, detect faces, and perform reference-based face matching. Used Google Drive metadata with dynamically sized thumbnails to perform recognition on lightweight image representations instead of downloading and processing the complete dataset.',
+    highlights: [
+      'Reference-Based Face Matching',
+      'Google Drive Metadata',
+      'Dynamically Sized Thumbnails',
+      'Lightweight Recognition Pipeline',
+    ],
+    tech: [
+      'Python',
+      'Google Drive API',
+      'OAuth',
+      'InsightFace',
+      'Face Detection',
+      'Face Recognition',
+      'Face Embeddings',
+      'Google Drive Metadata',
+      'Image Processing',
+    ],
+    icon: FaPython,
+    prominent: true,
+    badge: 'AI Project',
   },
   {
     title: 'CattleEye',
-    type: 'AI-Based Cattle Breed Classification',
+    type: 'AI-Based Cattle Breed Classification System',
     summary:
       'Full-stack AI application for image-based cattle breed classification with a clean inference pipeline and structured data storage.',
     highlights: [
@@ -109,29 +161,50 @@ export const projects = [
 ]
 
 export const skillGroups = [
-  { title: 'Languages', icon: FaPython, items: ['Python', 'SQL', 'Java'] },
+  { title: 'Programming', icon: FaPython, items: ['Python', 'SQL', 'Java', 'C++'] },
   {
-    title: 'Data Science',
+    title: 'Data Science & ML',
     icon: SiScikitlearn,
-    items: ['NumPy', 'Pandas', 'Scikit-learn', 'TensorFlow', 'Keras', 'Matplotlib'],
+    items: [
+      'NumPy',
+      'Pandas',
+      'Scikit-learn',
+      'TensorFlow',
+      'Keras',
+      'Machine Learning',
+      'Feature Engineering',
+      'Data Cleaning',
+      'Data Modeling',
+    ],
+  },
+  {
+    title: 'Computer Vision',
+    icon: SiTensorflow,
+    items: ['OpenCV', 'InsightFace', 'ArcFace', 'Face Embeddings', 'Image Processing', 'ONNX Runtime'],
   },
   {
     title: 'Analytics',
     icon: FaChartLine,
-    items: ['Tableau', 'Microsoft Excel', 'Data Visualization', 'EDA'],
+    items: ['Tableau', 'Microsoft Excel', 'Power BI', 'Matplotlib', 'Exploratory Data Analysis', 'Data Visualization'],
   },
-  { title: 'Backend', icon: SiFastapi, items: ['Flask', 'FastAPI', 'REST APIs'] },
+  { title: 'Backend & APIs', icon: SiFastapi, items: ['FastAPI', 'Flask', 'REST APIs', 'RBAC'] },
   { title: 'Databases', icon: FaDatabase, items: ['PostgreSQL', 'MySQL'] },
-  { title: 'Frontend', icon: FaReact, items: ['React', 'HTML', 'CSS'] },
+  { title: 'Frontend', icon: FaReact, items: ['React', 'HTML', 'CSS', 'Vite'] },
   {
     title: 'Developer Tools',
     icon: FaDocker,
-    items: ['Git', 'GitHub', 'Docker', 'Synology NAS', 'Jupyter Notebook', 'VS Code', 'Google Colab'],
-  },
-  {
-    title: 'Concepts',
-    icon: SiPandas,
-    items: ['Machine Learning', 'Feature Engineering', 'Data Cleaning', 'Data Modeling', 'RBAC'],
+    items: [
+      'Git',
+      'GitHub',
+      'Docker',
+      'Jupyter Notebook',
+      'VS Code',
+      'Google Colab',
+      'Synology NAS',
+      'ChatGPT',
+      'OpenAI Codex',
+      'Claude',
+    ],
   },
 ]
 
@@ -141,22 +214,22 @@ export const education = [
   {
     title: 'B.Tech Computer Science and Engineering',
     institution: 'ABES Institute of Technology',
-    board: 'AKTU',
+    board: 'Dr. A. P. J. Abdul Kalam Technical University, Lucknow',
     period: 'Expected May 2027',
     result: 'Current CGPA: 7.05',
   },
   {
     title: '10+2',
-    institution: 'Shri Guru Ram Rai Sr. Sec. Public School',
+    institution: 'Shri Guru Ram Rai Sr. Sec. Public School, Ludhiana, Punjab',
     board: 'Senior Secondary',
-    period: 'Completed',
+    period: 'March 2023',
     result: '82.8%',
   },
   {
     title: '10th',
-    institution: 'BCM Arya Model Senior Secondary School',
+    institution: 'BCM Arya Model Senior Secondary School, Ludhiana, Punjab',
     board: 'Secondary',
-    period: 'Completed',
+    period: 'March 2021',
     result: '80.4%',
   },
 ]

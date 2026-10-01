@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 import { FiArrowDown, FiDownload, FiMail } from 'react-icons/fi'
 import { contact, socialLinks } from '../data/portfolioData'
 
-const words = ['Analytics Solutions', 'ML Workflows', 'Enterprise ERP', 'Data Dashboards']
+const words = ['Machine Learning', 'Computer Vision', 'Data Analytics', 'Enterprise AI']
 const stats = [
-  { value: 1, suffix: '', label: 'Enterprise Project' },
+  { value: 4, suffix: '', label: 'Total Projects' },
   { value: 7.05, suffix: '', label: 'Current CGPA' },
 ]
 
@@ -76,7 +76,7 @@ function Hero() {
           </h1>
 
           <div className="mt-4 min-h-20 text-2xl font-bold text-zinc-100 sm:text-3xl">
-            Data Analytics & Data Science Enthusiast
+            Data Analytics | Data Science | AI
             <motion.span
               key={words[wordIndex]}
               initial={{ opacity: 0, y: 12 }}
@@ -89,8 +89,10 @@ function Hero() {
           </div>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            Building intelligent applications, analytics solutions, and enterprise
-            systems that transform data into actionable insights.
+            Data Analytics, Data Science, and AI enthusiast with hands-on experience
+            in enterprise ERP systems, computer vision, and machine learning research.
+            Skilled in Python, SQL, PostgreSQL, TensorFlow, REST APIs, and data
+            visualization, building end-to-end applications for real-world problems.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -148,7 +150,7 @@ function Hero() {
                 Current Focus
               </p>
               <p className="mt-3 text-lg font-semibold text-white">
-                Strengthening expertise in Data Analytics, Machine Learning, SQL, Tableau, and enterprise application development while building scalable real-world solutions.
+                Building intelligent enterprise and AI solutions by combining data analytics, machine learning, computer vision, and automation to transform real-world data into actionable insights.
               </p>
               <p className="mt-3 text-sm text-zinc-400">{contact.location}</p>
             </div>
